@@ -14,5 +14,6 @@ sudo service tomcat7 stop
 echo 'CATALINA_OPTS="-Xms512m -Xmx512m"' | sudo tee --append /usr/share/tomcat7/bin/setenv.sh
 sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tomcat7/
 
-#Installation of Xvfb
+#Installation and configuration of Xvfb
 sudo apt-get install -y xvfb
+sudo apt-get --only-upgrade install google-chrome-stable
