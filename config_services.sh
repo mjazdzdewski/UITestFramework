@@ -18,8 +18,8 @@ sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tom
 sudo apt-get install -y xvfb -qq
 sudo apt-get install libxss1 libappindicator1 libindicator7 -qq
 sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install build-essential
-sudo apt-get install aptitude
+sudo apt-get install -y build-essential -qq
+sudo apt-get install -y aptitude -qq
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 sudo apt-get install -f
