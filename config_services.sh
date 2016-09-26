@@ -15,8 +15,11 @@ echo 'CATALINA_OPTS="-Xms512m -Xmx512m"' | sudo tee --append /usr/share/tomcat7/
 sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tomcat7/
 
 #Installation and configuration of Xvfb
-sudo apt-get install -y xvfb
-sudo apt-get install libxss1 libappindicator1 libindicator7
+sudo apt-get install -y xvfb -qq
+sudo apt-get install libxss1 libappindicator1 libindicator7 -qq
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install build-essential
+sudo apt-get install aptitude
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 sudo apt-get install -f
