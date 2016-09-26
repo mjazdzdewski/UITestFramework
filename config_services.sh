@@ -3,7 +3,7 @@
 sudo apt-get update -qq
 
 #Installation and configuration of ActiveMQ
-sudo apt-get install -y activemq -qq
+sudo apt-get install -y activemq
 sudo ln -s /etc/activemq/instances-available/main /etc/activemq/instances-enabled/main
 sudo sed -e 's/<broker /<broker schedulerSupport="true" /' -i /etc/activemq/instances-enabled/main/activemq.xml
 sudo service activemq restart
@@ -16,10 +16,7 @@ sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tom
 
 #Installation and configuration of Xvfb
 sudo apt-get install -y xvfb -qq
-sudo apt-get install libxss1 libappindicator1 libindicator7 -qq
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install -y build-essential -qq
-sudo apt-get install -y aptitude -qq
+sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 sudo apt-get install -f
