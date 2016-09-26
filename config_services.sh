@@ -16,4 +16,6 @@ sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tom
 
 #Installation and configuration of Xvfb
 sudo apt-get install -y xvfb
-google-chrome --version
+sudo apt-get install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
