@@ -16,4 +16,3 @@ sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tom
 
 #Installation and configuration of Xvfb
 sudo apt-get install -y xvfb
-sudo apt-get --only-upgrade install chrome
