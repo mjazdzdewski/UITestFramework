@@ -15,10 +15,16 @@ echo 'CATALINA_OPTS="-Xms512m -Xmx512m"' | sudo tee --append /usr/share/tomcat7/
 sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tomcat7/
 
 #Installation and configuration of Xvfb
-sudo apt-get install -y xvfb -qq
-sudo apt-get install -y gdebi -qq
-wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_52.0.2743.116-0ubuntu0.16.04.1.1250_amd64.deb
-sudo gdebi chromium-browser*.deb
+#sudo apt-get install -y gdebi -qq
+#wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_52.0.2743.116-0ubuntu0.16.04.1.1250_amd64.deb
+#sudo gdebi chromium-browser*.deb
+export CHROME_BIN=/usr/bin/google-chrome
+export DISPLAY=:99.0
+sh -e /etc/init.d/xvfb start
+sudo apt-get update
+sudo apt-get install -y libappindicator1 fonts-liberation
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 #sudo apt-get install libxss1 libappindicator1 libindicator7 libstdc++6 fonts-liberation lsb-base
 #wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #sudo dpkg -i google-chrome*.deb
