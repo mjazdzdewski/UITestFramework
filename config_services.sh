@@ -22,7 +22,7 @@ export CHROME_BIN=/usr/bin/google-chrome
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
 sudo apt-get update
-sudo apt-get install -y libappindicator1 fonts-liberation
+sudo apt-get install -y libappindicator1 fonts-liberation libstdc++6 lsb-base
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 #sudo apt-get install libxss1 libappindicator1 libindicator7 libstdc++6 fonts-liberation lsb-base
