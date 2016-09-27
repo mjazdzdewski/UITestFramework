@@ -16,6 +16,7 @@ sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tom
 
 #Installation and configuration of Xvfb
 sudo apt-get install -y xvfb -qq
+sudo apt-get install -y gdebi -qq
 wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_52.0.2743.116-0ubuntu0.16.04.1.1250_amd64.deb
 sudo gdebi chromium-browser*.deb
 #sudo apt-get install libxss1 libappindicator1 libindicator7 libstdc++6 fonts-liberation lsb-base
