@@ -11,7 +11,8 @@ sudo service activemq restart
 #Installation and configuration of Tomcat
 sudo apt-get install -y tomcat7
 sudo service tomcat7 stop
-echo 'CATALINA_OPTS="-Xms512m -Xmx512m"' | sudo tee --append /usr/share/tomcat7/bin/setenv.sh
+echo 'CATALINA_OPTS="-Xmx1024m -XX:MaxPermSize=512m -Xms512m"' | sudo tee --append /usr/share/tomcat7/bin/setenv.sh
+#echo 'CATALINA_OPTS="-Xms512m -Xmx512m"' | sudo tee --append /usr/share/tomcat7/bin/setenv.sh
 sudo chown -R tomcat7:tomcat7 /var/lib/tomcat7/ /usr/share/tomcat7/ /var/log/tomcat7/
 
 #Installation and configuration of Xvfb
