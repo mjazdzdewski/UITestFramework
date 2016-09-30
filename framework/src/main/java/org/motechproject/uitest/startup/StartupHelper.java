@@ -124,6 +124,7 @@ public class StartupHelper {
         String response = httpClient.execute(new HttpGet(uri), new BasicResponseHandler());
 
         assertNotNull(response, "Unable to retrieve bundle status from server");
+        LOGGER.info("response: %s",response);
 
         return new JSONArray(response);
     }
